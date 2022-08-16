@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="63112fab8c6e494f972d3d726a6c48d3" Name="Diagram1">
-        <EntityTypeShape EntityType="EleverModel.Elevliste" Width="1.5" PointX="1.625" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="EleverModel.Elevliste" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -4,10 +4,10 @@
     <EntitySetMapping Name="Elevliste">
       <EntityTypeMapping TypeName="EleverModel.Elevliste">
         <MappingFragment StoreEntitySet="Elevliste">
-          <ScalarProperty Name="Navn" ColumnName="Navn" />
-          <ScalarProperty Name="Klasse" ColumnName="Klasse" />
-          <ScalarProperty Name="Alder" ColumnName="Alder" />
           <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Alder" ColumnName="Alder" />
+          <ScalarProperty Name="Klasse" ColumnName="Klasse" />
+          <ScalarProperty Name="Navn" ColumnName="Navn" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

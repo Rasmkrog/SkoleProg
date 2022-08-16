@@ -16,7 +16,7 @@ namespace Elever_Klasse.Models
     {
         public string Navn { get; set; }
         public string Klasse { get; set; }
-        public Nullable<int> Alder { get; set; }
+        public int Alder { get; set; }
         public int ID { get; set; }
     }
 }

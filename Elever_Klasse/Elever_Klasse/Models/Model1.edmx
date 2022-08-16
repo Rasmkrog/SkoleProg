@@ -4,36 +4,35 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="EleverModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="EleverModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Elevliste">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Navn" Type="nvarchar" MaxLength="50" />
-          <Property Name="Klasse" Type="nvarchar" MaxLength="50" />
-          <Property Name="Alder" Type="int" />
+          <Property Name="Navn" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Klasse" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Alder" Type="int" Nullable="false" />
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
         </EntityType>
         <EntityContainer Name="EleverModelStoreContainer">
           <EntitySet Name="Elevliste" EntityType="Self.Elevliste" Schema="dbo" store:Type="Tables" />
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="EleverModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="EleverEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Elevliste" EntityType="EleverModel.Elevliste" />
+        </EntityContainer>
         <EntityType Name="Elevliste">
           <Key>
             <PropertyRef Name="ID" />
           </Key>
-          <Property Name="Navn" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Klasse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Alder" Type="Int32" />
+          <Property Name="Navn" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Klasse" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Alder" Type="Int32" Nullable="false" />
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
         </EntityType>
-        <EntityContainer Name="EleverEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Elevliste" EntityType="Self.Elevliste" />
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -43,10 +42,10 @@
           <EntitySetMapping Name="Elevliste">
             <EntityTypeMapping TypeName="EleverModel.Elevliste">
               <MappingFragment StoreEntitySet="Elevliste">
-                <ScalarProperty Name="Navn" ColumnName="Navn" />
-                <ScalarProperty Name="Klasse" ColumnName="Klasse" />
-                <ScalarProperty Name="Alder" ColumnName="Alder" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Alder" ColumnName="Alder" />
+                <ScalarProperty Name="Klasse" ColumnName="Klasse" />
+                <ScalarProperty Name="Navn" ColumnName="Navn" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

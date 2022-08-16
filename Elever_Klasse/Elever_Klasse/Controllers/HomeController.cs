@@ -31,7 +31,7 @@ namespace Elever_Klasse.Controllers
                 throw new ArgumentNullException(nameof(Name));
             }
 
-            Elev _elever = new Elev();
+            Elevliste _elever = new Elevliste();
 
             using (EleverEntities entities = new EleverEntities())
             {

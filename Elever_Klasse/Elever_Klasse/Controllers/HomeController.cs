@@ -31,6 +31,7 @@ namespace Elever_Klasse.Controllers
                 throw new ArgumentNullException(nameof(Name));
             }
 
+
             Elevliste _elever = new Elevliste();
 
             using (EleverEntities entities = new EleverEntities())
@@ -39,7 +40,6 @@ namespace Elever_Klasse.Controllers
                            where r.Navn == Name
                            select r).FirstOrDefault();
             }
-            Elev new_elev = new Elev();
 
             return (Json(_elever));
         }

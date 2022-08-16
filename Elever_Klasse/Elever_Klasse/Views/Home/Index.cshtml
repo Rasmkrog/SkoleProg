@@ -2,7 +2,7 @@
     ViewBag.Title = "Home Page";
 }
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
 
@@ -77,6 +77,8 @@
     <input type="text" id="txtNavn" />
     <input type="button" id="btnGet" value="Get Current Time" />
 
+    <div id="test1"></div>
+
 
 </div>
 
@@ -92,6 +94,8 @@
             dataType: "json",
             success: function (response) {
                 alert("Hello: " + response.Navn + " " + response.Klasse + " " + response.Alder);
+                $("#test1").html(response.Navn + " " + response.Klasse + " " + response.Alder);
+
             },
             failure: function (response) {
                 alert(response.responseText);

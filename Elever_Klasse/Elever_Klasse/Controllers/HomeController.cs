@@ -41,13 +41,7 @@ namespace Elever_Klasse.Controllers
             }
             Elev new_elev = new Elev();
 
-
-            new_elev.Navn = _elever.Navn;
-            new_elev.Klasse = _elever.Klasse;
-            new_elev.Alder = _elever.Alder;
-
-
-            return (Json(new_elev));
+            return (Json(_elever));
         }
 
         public ActionResult About()
